@@ -1,0 +1,24 @@
+/Requires: Two array required a and b and must not be null and must have at least one element.
+//Modifies: The array 'a'.
+//Effects:  Replaces the element at the index of the maximum value in array 'a' with the maximum value in array 'b'.
+
+// Finding the maximum value and its index in array 'a'
+public static void substituteMax(int[] a, int[] b) {
+int maxOfA = a[0];
+int index = 0;
+for (int i = 0; i < a.length; i++) {
+if(a[i] > maxOfA) {
+maxOfA = a[i];
+index = i;
+}
+}
+// Finding the maximum value in array 'b'
+int maxOfB = b[0];
+for (int i = 0; i < b.length; i++) {
+if(b[i] > maxOfB) {
+maxOfB = b[i];
+}
+}
+// Replacing the element at the index of the maximum value in array 'a' with the maximum value in array 'b'
+a[index] = maxOfB;
+}
